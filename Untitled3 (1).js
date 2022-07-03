@@ -47,7 +47,7 @@ function Calculate(data){
 
 // 演算子が＝のときは、合計値、合計と入力の演算子をクリアし、それ以外は、演算子で入力された値で出力。
 if (data == "="){	
-  Total = 0;	
+ 
   Calc = "+";	
 }
 else{	
