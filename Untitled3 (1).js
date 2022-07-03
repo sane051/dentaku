@@ -9,13 +9,24 @@ let Flg = 1;
 //. 一連の計算式
 let Work = Total + Calc + Input;
 
-// 0～9または小数点ボタンを押す
+let setresult;
+
+
+
+
+// 0～9ボタンを押す
 function edit(data){	
   Flg = 0;
   // 数字を選択したら、入力している値に追加
   Input += data;	
   document.dentaku.display.value = Input;	
-}	
+ 
+if (Input ==="0"){
+  Input = "";
+  
+}
+}
+
 
 // 演算子を押す
 function Calculate(data){	
@@ -31,6 +42,9 @@ function Calculate(data){
   document.dentaku.display.value = Total;	
 }	
 
+
+
+
 // 演算子が＝のときは、合計値、合計と入力の演算子をクリアし、それ以外は、演算子で入力された値で出力。
 if (data == "="){	
   Total = 0;	
@@ -41,6 +55,8 @@ else{
 }	
 }	
 
+
+
 // クリアボタン[AC]を押した時の処理
 function AC(){	
   Total = 0;	
@@ -48,3 +64,5 @@ function AC(){
   Input = "";
   document.dentaku.display.value = Total;	
 }
+
+
